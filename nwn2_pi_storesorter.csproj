@@ -62,7 +62,10 @@
     <Compile Include="StoreSorter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PostBuildEvent>copy /y C:\GIT\nwn2_pi_storesorter\bin\Debug\nwn2_pi_storesorter.dll "C:\Neverwinter Nights 2\NWN2Toolset\Plugins\"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <PostBuildEvent>copy /y C:\GIT\nwn2_pi_storesorter\bin\Release\nwn2_pi_storesorter.dll "C:\Neverwinter Nights 2\NWN2Toolset\Plugins\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
