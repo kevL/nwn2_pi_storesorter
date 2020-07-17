@@ -14,9 +14,9 @@ using OEIShared.Utils;
 
 namespace nwn2_pi_storesorter
 {
-	sealed class StoreSort
+	static class StoreSort
 	{
-		internal StoreSort()
+		internal static void SortStore()
 		{
 			// first check areaviewer for a selected Instance ->
 			NWN2AreaViewer areaviewer;

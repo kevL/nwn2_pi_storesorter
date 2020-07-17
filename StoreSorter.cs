@@ -22,7 +22,8 @@ namespace nwn2_pi_storesorter
 
 		/// <summary>
 		/// Preferences will be stored in an XML-file w/ this label in
-		/// "C:\Users\User\AppData\Local\NWN2 Toolset\Plugins" (or similar).
+		/// "C:\Users\User\AppData\Local\NWN2 Toolset\Plugins" (or similar)
+		/// but this plugin has no preferences.
 		/// </summary>
 		public string Name
 		{ get; set; }
@@ -32,14 +33,19 @@ namespace nwn2_pi_storesorter
 		/// </summary>
 		public string MenuName
 		{
-			get { return "StoreSorter"; }
+			get { return "Sort Merchant Store"; }
 		}
 
 		/// <summary>
-		/// The caption on the titlebar of the plugin window.
+		/// The caption on the titlebar of the plugin window. If this had a
+		/// window; there is no window.
+		/// This is also the name that appears in the toolset's Options.
+		/// @note There are no options.
 		/// </summary>
 		public string DisplayName
-		{ get; set; }
+		{
+			get { return "Sort Merchant Store"; }
+		}
 
 
 		public void Load(INWN2PluginHost host)
@@ -69,7 +75,7 @@ namespace nwn2_pi_storesorter
 #if DEBUG
 			logfile.createLogfile();
 #endif
-			new StoreSort();
+			StoreSort.SortStore();
 		}
 	}
 }
