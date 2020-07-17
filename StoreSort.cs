@@ -63,6 +63,7 @@ namespace nwn2_pi_storesorter
 				{
 					id = its[i].Item.BaseItem.Row;
 					TwoDaRef = new TwoDAReference("baseitems", "StorePanel", false, id);
+					// NOTE: If row is invalid a blank string is returned.
 
 					switch (TwoDaRef.ToString())
 					{
@@ -122,6 +123,7 @@ namespace nwn2_pi_storesorter
 						var it = new NWN2ItemInstance(its[i].Item);
 						id = it.BaseItem.Row;
 						TwoDaRef = new TwoDAReference("baseitems", "StorePanel", false, id);
+						// NOTE: If row is invalid a blank string is returned.
 
 						switch (TwoDaRef.ToString())
 						{
