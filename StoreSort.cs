@@ -29,42 +29,31 @@ namespace nwn2_pi_storesorter
 				var store = collection[0] as NWN2StoreInstance;
 				var its = new NWN2InstanceStoreItemCollection();
 
-
 				// add items in the store of all types into 'its'
 				int count = store.ArmorItems.Count;
 				for (int i = 0; i != count; ++i)
 					its.Add(store.ArmorItems[i]);
-
 				store.ArmorItems.Clear();
-
 
 				count = store.WeaponItems.Count;
 				for (int i = 0; i != count; ++i)
 					its.Add(store.WeaponItems[i]);
-
 				store.WeaponItems.Clear();
-
 
 				count = store.PotionItems.Count;
 				for (int i = 0; i != count; ++i)
 					its.Add(store.PotionItems[i]);
-
 				store.PotionItems.Clear();
-
 
 				count = store.RingItems.Count;
 				for (int i = 0; i != count; ++i)
 					its.Add(store.RingItems[i]);
-
 				store.RingItems.Clear();
-
 
 				count = store.MiscellaneousItems.Count;
 				for (int i = 0; i != count; ++i)
 					its.Add(store.MiscellaneousItems[i]);
-
 				store.MiscellaneousItems.Clear();
-
 
 				// sort the items that are in 'its' to their store-panels per their BaseItems.2da "StorePanel" val
 				TwoDAReference TwoDaRef;
@@ -77,26 +66,12 @@ namespace nwn2_pi_storesorter
 
 					switch (TwoDaRef.ToString())
 					{
-						default:
-//						case "0": // Armor
-							store.ArmorItems.Add(its[i]);
-							break;
-
-						case "1": // Weapon
-							store.WeaponItems.Add(its[i]);
-							break;
-
-						case "2": // Potion or scroll (useables)
-							store.PotionItems.Add(its[i]);
-							break;
-
-						case "3": // Ring etc. (trinkets)
-							store.RingItems.Add(its[i]);
-							break;
-
-						case "4": // Miscellaneous
-							store.MiscellaneousItems.Add(its[i]);
-							break;
+//						case "0":
+						default:  store.ArmorItems        .Add(its[i]); break;
+						case "1": store.WeaponItems       .Add(its[i]); break;
+						case "2": store.PotionItems       .Add(its[i]); break;
+						case "3": store.RingItems         .Add(its[i]); break;
+						case "4": store.MiscellaneousItems.Add(its[i]); break;
 					}
 				}
 
@@ -112,42 +87,31 @@ namespace nwn2_pi_storesorter
 					var store = selection[0] as NWN2StoreBlueprint;
 					var its = new NWN2BlueprintStoreItemCollection();
 
-
 					// add items in the store of all types into 'its'
 					int count = store.ArmorItems.Count;
 					for (int i = 0; i != count; ++i)
 						its.Add(store.ArmorItems[i]);
-
 					store.ArmorItems.Clear();
-
 
 					count = store.WeaponItems.Count;
 					for (int i = 0; i != count; ++i)
 						its.Add(store.WeaponItems[i]);
-
 					store.WeaponItems.Clear();
-
 
 					count = store.PotionItems.Count;
 					for (int i = 0; i != count; ++i)
 						its.Add(store.PotionItems[i]);
-
 					store.PotionItems.Clear();
-
 
 					count = store.RingItems.Count;
 					for (int i = 0; i != count; ++i)
 						its.Add(store.RingItems[i]);
-
 					store.RingItems.Clear();
-
 
 					count = store.MiscellaneousItems.Count;
 					for (int i = 0; i != count; ++i)
 						its.Add(store.MiscellaneousItems[i]);
-
 					store.MiscellaneousItems.Clear();
-
 
 					// sort the items that are in 'its' to their store-panels per their BaseItems.2da "StorePanel" val
 					TwoDAReference TwoDaRef;
@@ -161,26 +125,12 @@ namespace nwn2_pi_storesorter
 
 						switch (TwoDaRef.ToString())
 						{
-							default:
-//							case "0": // Armor
-								store.ArmorItems.Add(its[i]);
-								break;
-
-							case "1": // Weapon
-								store.WeaponItems.Add(its[i]);
-								break;
-
-							case "2": // Potion or scroll (useables)
-								store.PotionItems.Add(its[i]);
-								break;
-
-							case "3": // Ring etc. (trinkets)
-								store.RingItems.Add(its[i]);
-								break;
-
-							case "4": // Miscellaneous
-								store.MiscellaneousItems.Add(its[i]);
-								break;
+//							case "0":
+							default:  store.ArmorItems        .Add(its[i]); break;
+							case "1": store.WeaponItems       .Add(its[i]); break;
+							case "2": store.PotionItems       .Add(its[i]); break;
+							case "3": store.RingItems         .Add(its[i]); break;
+							case "4": store.MiscellaneousItems.Add(its[i]); break;
 						}
 					}
 
