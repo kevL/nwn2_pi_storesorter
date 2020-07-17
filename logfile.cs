@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if DEBUG
+using System;
 using System.IO;
 
 
@@ -27,3 +28,4 @@ namespace nwn2_pi_storesorter
 		}
 	}
 }
+#endif
