@@ -78,6 +78,7 @@ namespace nwn2_pi_storesorter
 
 				var a = new INWN2Instance[] { store };
 				NWN2ToolsetMainForm.App.AreaContents.SelectInstances(a); // update store panels.
+				// NOTE: Floating panels won't be updated.
 			}
 			else // second check blueprint tree for a selected Blueprint ->
 			{
@@ -138,6 +139,7 @@ namespace nwn2_pi_storesorter
 
 					string label = (selection[0] as INWN2Object).LocalizedName[BWLanguages.CurrentLanguage];
 					NWN2ToolsetMainForm.App.CreateNewPropertyPanel(selection, NWN2ToolsetMainForm.App.Module, false, label); // update store panels.
+					// NOTE: Floating panels won't be updated.
 				}
 			}
 		}
